@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>医師紹介｜さわやか歯科クリニック</title>
+    <link rel="icon" href="images/favicon.svg?v=1" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/navi.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/doctor.css" />
+  </head>
+
+  <body id="doctor">
+    <main>
+      <!-- メインビジュアル -->
+      <div class="mainvisual">
+        <img src="images/img8.jpg" alt="院内風景" />
+      </div>
+
+      <!-- レイアウト（メインコンテンツ部分のみ） -->
+      <div class="layout">
+        <div class="main-content">
+          <!-- Message セクション -->
+          <section id="message" class="wrapper">
+            <h2 class="section-title">
+              <span class="en">Message</span>
+              <span class="ja">メッセージ</span>
+            </h2>
+            <div class="content-wrapper">
+              <div class="doctor-photo">
+                <img src="images/doctor2_matsumoto.jpg" alt="院長写真" />
+                <p class="doctor-name">
+                  院長<br />
+                  <span class="en">Takako Matsumoto</span><br />
+                  松本 貴子
+                </p>
+              </div>
+              <div class="doctor-message">
+                <p>
+                  小さなお子さまからご年配の方まで、安心して通える歯科クリニックを目指しています。
+                </p>
+                <p>
+                  歯医者に苦手意識を持つ方にも、やさしく丁寧な治療を提供し、リラックスできる環境を整えています。
+                  痛みを抑えた治療やわかりやすい説明を心がけ、不安なく通えるよう努めています。
+                  また、歯の健康は全身の健康につながるため、治療だけでなく予防歯科にも力を入れています。
+                  定期検診やクリーニングを通じて、みなさまの大切な歯を守り続けるお手伝いをしていきます。
+                  地域のみなさまにとって、「ここなら安心して通える」と思っていただけるクリニックを目指し、
+                  スタッフ一同、努力してまいります。どうぞよろしくお願いいたします。
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 医師プロフィール -->
+          <section id="doctors" class="wrapper">
+            <article class="doctor-profile">
+              <img src="images/doctor1_tanaka.jpg" alt="田中 健介" />
+              <div class="profile-text">
+                <h3>
+                  副院長<br />
+                  <span class="en">Kensuke Tanaka</span><br />
+                  田中 健介
+                </h3>
+                <p>
+                  お口の健康は全身の健康にも大きく関わります。患者さんが永く健康な歯を保てるよう、
+                  最適な治療とアドバイスを提供いたします。<br />
+                  お気軽にご相談ください。
+                </p>
+                <p>得意な治療: 口腔外科・補綴治療・歯周病治療</p>
+                <p>趣味: ランニング・映画鑑賞・登山</p>
+              </div>
+            </article>
+
+            <article class="doctor-profile">
+              <img src="images/staff1suzuki.jpg" alt="鈴木 由佳" />
+              <div class="profile-text">
+                <h3>
+                  歯科医師<br />
+                  <span class="en">Yuka Suzuki</span><br />
+                  鈴木 由佳
+                </h3>
+                <p>
+                  定期的なメンテナンスで健康な歯を守りましょう。クリーニングや予防歯科を担当し、
+                  日々のケアについてもわかりやすくお伝えしています。
+                </p>
+                <p>得意な治療: ホワイトニング・予防歯科</p>
+                <p>趣味: ヨガ・お菓子作り・音楽鑑賞</p>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+      <!-- /.layout -->
+
+      <!-- サイドナビ（layoutの外に出す） -->
+      <aside
+        class="side-nav"
+        role="complementary"
+        aria-label="ページ内ナビゲーション"
+      >
+        <div class="nav-wrapper">
+          <img
+            src="images/logo2.svg"
+            alt="さわやか歯科クリニック"
+            class="logo"
+          />
+          <nav>
+            <ul>
+              <li><a href="index.html#top" data-en="Home">ホーム</a></li>
+              <li>
+                <a href="index.html#clinic-concept" data-en="About clinic"
+                  >当院について</a
+                >
+              </li>
+              <li>
+                <a href="index.html#service" data-en="Service">診療案内</a>
+              </li>
+              <li><a href="doctor.html" data-en="Doctor">医師紹介</a></li>
+              <li><a href="index.html#access" data-en="Access">アクセス</a></li>
+              <li><a href="contact.html" data-en="Contact">お問い合わせ</a></li>
+            </ul>
+          </nav>
+          <address class="clinic-info">
+            <p>〒105-0001 東京都港区虎ノ門1丁目3-1</p>
+            <p>TEL <a href="tel:0100110123">0100-11-0123</a></p>
+          </address>
+        </div>
+      </aside>
+    </main>
+
+    <!-- フッター -->
+    <footer id="footer">
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; Sawayaka Dental Clinic All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

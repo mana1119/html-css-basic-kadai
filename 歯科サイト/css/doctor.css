@@ -1,0 +1,191 @@
+#doctor .mainvisual img {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  object-fit: cover;
+}
+
+#doctor .side-nav {
+  position: fixed; /* 画面に固定 */
+  top: 0; /* ページ最上部から */
+  height: 100vh;
+  background: #fff;
+  right: 0;
+}
+
+.layout {
+  display: flex;
+  width: 100%;
+  /* 中央に収める上限幅 */
+  margin: 0 auto; /* 中央寄せ */
+  box-sizing: border-box;
+}
+
+.main-content {
+  background-color: #f5fbfd;
+  flex: 1; /* 残り幅いっぱい */
+  min-width: 0; /* flex収縮時にテキスト崩れ防止 */
+  padding: 60px 160px;
+  order: 1;
+}
+
+/* ===== Messageセクション ===== */
+#message .content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* レスポンシブ用 */
+}
+
+/* --- 写真エリア --- */
+.doctor-photo {
+  position: relative;
+  flex: 0 0 360px; /* 固定幅（画像サイズに合わせて調整） */
+}
+
+.doctor-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* --- 名前ラベル（縦帯＋縦書き） --- */
+.doctor-name {
+  position: absolute;
+  top: 20px;
+  left: -60px; /* 写真からはみ出させる */
+  background: #6bb6e9; /* ブルー帯 */
+  color: #000;
+  padding: 10px 8px;
+  writing-mode: vertical-rl; /* 縦書き（日本語・英語両方） */
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* --- メッセージ本文 --- */
+.doctor-message {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.doctor-message p + p {
+  margin-top: 1em;
+}
+
+/* --- 見出し（Message） --- */
+#message .section-title {
+  margin-bottom: 30px;
+}
+
+#message .section-title .en {
+  font-size: 22px;
+  font-weight: bold;
+  color: #004080;
+}
+
+#message .section-title .ja {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===== レスポンシブ対応 ===== */
+@media (max-width: 768px) {
+  #message .content-wrapper {
+    flex-direction: column;
+  }
+
+  .doctor-photo {
+    flex: none;
+    margin: 0 auto;
+  }
+
+  .doctor-name {
+    left: 10px; /* モバイルは画像内に収める */
+    top: 10px;
+  }
+
+  .doctor-message {
+    margin-top: 20px;
+  }
+}
+
+/* ------------------------------
+   医師プロフィール
+------------------------------ */
+#doctors {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.doctor-profile {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.doctor-profile img {
+  flex: 0 0 240px;
+  width: 240px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.profile-text {
+  flex: 1;
+  font-size: 15px;
+}
+
+.profile-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.profile-text h3 .en {
+  font-size: 14px;
+  color: #4281b7;
+}
+
+/* ------------------------------
+   フッター
+------------------------------ */
+#footer {
+  background: #f5f5f5;
+  margin-top: 80px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ------------------------------
+   レスポンシブ対応
+------------------------------ */
+@media (max-width: 768px) {
+  #message .content-wrapper,
+  .doctor-profile {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .doctor-photo,
+  .doctor-profile img {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .doctor-message,
+  .profile-text {
+    font-size: 14px;
+  }
+}
